@@ -205,6 +205,18 @@ footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
 }
 @media (max-width: 900px) { .testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .testimonials-grid { grid-template-columns: 1fr; } .testimonials { padding: 60px 24px; } }
+
+@media (max-width: 768px) {
+  div.screenshots-strip {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+  div.screenshots-strip div.screenshot-item {
+    width: 75% !important;
+    margin: 0 auto !important;
+  }
+}
 </style>
 </head>
 <body>
