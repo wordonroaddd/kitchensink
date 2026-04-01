@@ -305,7 +305,7 @@ M10 23 m0 0h1v1h-1z M11 23 m0 0h1v1h-1z M17 23 m0 0h1v1h-1z M18 23 m0 0h1v1h-1z 
     </div>
     <div class="hero-stats">
       <div><span class="stat-num">11K+</span><span class="stat-label">Downloads</span></div>
-      <div><span class="stat-num">10 wks</span><span class="stat-label">Since launch</span></div>
+      <div><span class="stat-num" id="weeks-counter">10 wks</span><span class="stat-label">Since launch</span></div>
       <div><span class="stat-num">Free</span><span class="stat-label">To get started</span></div>
     </div>
   </div>
@@ -435,8 +435,8 @@ M10 23 m0 0h1v1h-1z M11 23 m0 0h1v1h-1z M17 23 m0 0h1v1h-1z M18 23 m0 0h1v1h-1z 
   </div>
 </section>
 
-<!--
-<section class="wck">
+
+<!-- <section class="wck">
   <div class="wck-inner">
     <div class="wck-logo">🌍</div>
     <div class="wck-text">
@@ -444,8 +444,7 @@ M10 23 m0 0h1v1h-1z M11 23 m0 0h1v1h-1z M17 23 m0 0h1v1h-1z M18 23 m0 0h1v1h-1z 
       <p class="wck-copy">A portion of every Kitchen Sink subscription supports <a href="https://www.nokidhungry.org" target="_blank">No Kid Hungry</a>, the campaign working to end childhood hunger in America.</p>
     </div>
   </div>
-</section>
--->
+</section> -->
 <section class="press">
   <div class="press-inner">
     <div class="section-label">Get in touch</div>
@@ -500,5 +499,12 @@ function sendSMS(e) {
 </script>
 
 
+
+<script>
+var launch = new Date('2026-01-23');
+var today = new Date();
+var weeks = Math.floor((today - launch) / (1000 * 60 * 60 * 24 * 7));
+document.getElementById('weeks-counter').textContent = weeks + ' wks';
+</script>
 </body>
 </html>
