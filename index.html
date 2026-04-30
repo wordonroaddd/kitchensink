@@ -367,8 +367,7 @@ footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
 <section class="hero-wrapper"><div class="hero">
   <div class="hero-left">
     <div class="hero-badges">
-      <div id="ios-badge" class="hero-badge">Now on iOS</div>
-      <div id="android-badge" class="hero-badge android-badge">Android coming soon</div>
+      <div id="ios-badge" class="hero-badge">Now on iOS and Android</div>
     </div>
     <h1>The recipe app that starts with <em>your</em> fridge.</h1>
     <p class="hero-sub">Tell us what's in your fridge, what you're feeling, and how much time you've got. We'll handle the rest — recipes, meal plan, grocery list, drink pairing included.</p>
@@ -378,10 +377,10 @@ footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         Download on the App Store
       </a>
-      <div id="android-btn" class="btn-primary btn-disabled" aria-disabled="true" style="justify-content:center;">
+      <a id="android-btn" href="https://play.google.com/store/apps/details?id=app.kitchensink.recipebuilder" class="btn-primary" target="_blank" style="justify-content:center;">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.3414c-.5665 0-1.0251-.4588-1.0251-1.0248 0-.5665.4586-1.0251 1.0251-1.0251.5659 0 1.0248.4586 1.0248 1.0251 0 .5659-.4589 1.0248-1.0248 1.0248m-11.046 0c-.5666 0-1.0252-.4588-1.0252-1.0248 0-.5665.4586-1.0251 1.0252-1.0251.5659 0 1.0248.4586 1.0248 1.0251 0 .5659-.4589 1.0248-1.0248 1.0248m11.4141-6.02l2.0495-3.5498a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0759 3.5955c-1.5872-.7244-3.368-1.1273-5.2221-1.1273s-3.635.4029-5.2221 1.1273L4.5692 5.2561a.4158.4158 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l2.0495 3.5498C2.3108 11.1305.7202 14.2115.5 17.7115h22c-.2202-3.5-1.8108-6.581-5.1089-8.3901"/></svg>
         <span id="android-label">Download on Play Store</span>
-      </div>
+      </a>
       </div>
       </div>
     <div class="hero-stats">
@@ -598,27 +597,6 @@ var weeks = Math.floor((today - launch) / (1000 * 60 * 60 * 24 * 7));
 document.getElementById('weeks-counter').textContent = weeks + ' wks';
 </script>
 
-<script>
-(function() {
-  var goLive = new Date('2026-05-04T00:00:00');
-  var btn = document.getElementById('android-btn');
-  if (!btn) return;
-  function check() {
-    var now = new Date();
-    if (now >= goLive) {
-      btn.classList.add('btn-live');
-      btn.classList.remove('btn-disabled');
-      btn.setAttribute('role', 'link');
-      btn.onclick = function() { window.open('https://play.google.com/store/apps/details?id=app.kitchensink.recipebuilder', '_blank'); };
-      var iosBadge = document.getElementById('ios-badge');
-      var androidBadge = document.getElementById('android-badge');
-      if (iosBadge) iosBadge.textContent = 'Now on iOS and Android';
-      if (androidBadge) androidBadge.style.display = 'none';
-    }
-  }
-  check();
-  setInterval(check, 60000);
-})();
-</script>
+
 </body>
 </html>
